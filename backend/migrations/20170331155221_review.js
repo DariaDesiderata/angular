@@ -5,7 +5,7 @@ exports.up = (knex) => {
     review.integer('stars')
     review.text('body')
     review.integer('farm_id').references('id').inTable('farm').onDelete('cascade')
-    review.integer('user_id').references('uid').inTable('user')
+    review.string('user_id').references('email').inTable('user')
   })
 };
 
