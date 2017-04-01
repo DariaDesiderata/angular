@@ -14,11 +14,11 @@ exports.seed = function(knex, Promise) {
           name: 'Piglet'
         },
         {
-          email: 'Pooh@gmail.com',
+          email: 'pooh@gmail.com',
           name: 'Pooh'
         },
         {
-          email: 'Tigger@gmail.com',
+          email: 'tigger@gmail.com',
           name: 'Tigger'
         }
       ]);
