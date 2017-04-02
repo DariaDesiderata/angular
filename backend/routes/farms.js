@@ -31,6 +31,7 @@ router.get('/', (req, res) => {
     res.status(503).send(err.message)
   })
 })
+
 router.get('/:id', (req, res) => {
   const id = Number(req.params.id)
   getFarmById().then(result => {
@@ -41,6 +42,7 @@ router.get('/:id', (req, res) => {
     res.status(503).send(err.message)
   })
 })
+
 router.post('/', (req, res) => {
   createNewFarm(req.body).then(newFarm => {
     res.json(newFarm)
@@ -50,6 +52,7 @@ router.post('/', (req, res) => {
     res.status(503).send(err.message)
   })
 })
+
 router.put('/:id', (req, res) => {
   const id = Number(req.params.id)
   updateFarm(id, req.body).then(updatedFarm => {
