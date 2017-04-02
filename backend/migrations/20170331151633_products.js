@@ -3,7 +3,7 @@ exports.up = (knex) => {
     product.increments('id').primary()
     product.string('name')
     product.integer('quantity')
-    product.integer('price')
+    product.float('price')
     product.string('uom')
     product.integer('category_id').references('id').inTable('foodcategory').onDelete('cascade')
   })
